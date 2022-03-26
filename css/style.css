@@ -1,0 +1,148 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html, body {
+  color: #ffffff;
+  font-size: 62.5%;
+  font-weight: normal;
+  background: linear-gradient(to right top, #060606, #050504, #030303, #020201, #000000);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+button, input {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.container {
+  width: 130rem;
+  margin: 0 auto;
+}
+
+.button {
+  font-size: 1.6rem;
+  border-radius: 50px;
+  padding: 1rem 3rem;
+  transition: opacity .3s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 4rem 11rem 4rem 8rem;
+  z-index: 10;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  display: block;
+  background-image: url('../img/logo.svg');
+  background-repeat: no-repeat;
+  width: 4rem;
+  height: 4rem;
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__link {
+  font-size: 1.6rem;
+  margin-right: 7.1rem;
+}
+
+.header__link:last-of-type {
+  margin-right: 0;
+}
+
+.header__button {
+  background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+}
+
+.main-display__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.main-display .container {
+  position: relative;
+  z-index: 10;
+  margin-top: 27rem;
+}
+
+.main-display__header {
+  font-size: 6.4rem;
+  max-width: 70rem;
+  margin-bottom: 5rem;
+}
+
+.main-display__timer {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 7.6rem;
+}
+
+.timer__item {
+  width: 10.2rem;
+  height: 11.2rem;
+  background-color: #121212;
+  margin-right: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer__item:last-of-type {
+  margin-right: 0;
+}
+
+.timer__count {
+  font-size: 3.6rem;
+}
+
+.timer__text {
+  font-size: 1.6rem;
+  opacity: 0.4;
+}
+
+.main-display__button {
+  background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+}
