@@ -11,6 +11,17 @@ html, body {
   background: linear-gradient(to right top, #060606, #050504, #030303, #020201, #000000);
 }
 
+body {
+  margin-right: 23px;
+}
+
+.noscroll {
+  height: 100%;
+  overflow: hidden;
+  margin-right: 40px;
+}
+
+
 img {
   width: 100%;
   height: 100%;
@@ -61,8 +72,8 @@ button:hover {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  padding: 4rem 11rem 4rem 8rem;
-  z-index: 10;
+  padding: 4rem 12rem 4rem 8rem;
+  z-index: 10;  
 }
 
 .header__wrapper {
@@ -412,4 +423,97 @@ transform: matrix(-1, 0, 0, 1, 0, 0);
 
 .youtube {
   background-image: url('../img/youtube.svg');
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  padding: 3rem 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow: auto;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s ease;
+}
+
+.modal_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #2C2C2C;
+  padding: 9rem 9.5rem;
+  position: relative;
+}
+
+.modal__close {
+  background-color: transparent;
+  background-image: url(../img/icon-close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: -2.5rem;
+  right: -2.5rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.modal__header {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 140%;
+}
+
+.modal__text {
+  font-size: var(--text-size-medium);
+  line-height: 160%;
+  margin-bottom: 2.8rem;
+  opacity: 0.5;
+}
+
+.modal__elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__input-wrap {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 1.6rem;
+  border-radius: 50px;
+}
+
+.modal__input {
+  position: relative;
+  color: #ffffff;
+  font-size: var(--text-size-medium);
+  line-height: 160%;
+  width: 45.4rem;  
+  padding: 1.1rem 3rem;
+  background-color: transparent;
+}
+
+.modal__input::placeholder {
+  color: #ffffff;
+  opacity: 0.8;
+}
+.modal__button {
+  background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+  max-width: 14.2rem;
+  margin-top: 3.2rem;
 }
